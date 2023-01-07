@@ -5,7 +5,7 @@ theme = "puppet"
 #themesDir = "../.."
 
 copyright = "bignum"
-paginate = 3
+paginate = 5
 languageCode = "ja-jp"
 defaultContentLanguage = "ja-jp"
 

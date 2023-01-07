@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IFW on bignumのblog</title>
+    <link>https://blog.bignum.org/tags/ifw/</link>
+    <description>Recent content in IFW on bignumのblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>bignum</copyright>
+    <lastBuildDate>Mon, 13 Aug 2018 23:31:26 +0900</lastBuildDate><atom:link href="https://blog.bignum.org/tags/ifw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説</title>
+      <link>https://blog.bignum.org/post/20180813-1/</link>
+      <pubDate>Mon, 13 Aug 2018 23:31:26 +0900</pubDate>
+      
+      <guid>https://blog.bignum.org/post/20180813-1/</guid>
+      <description>EWIなどのウインドシンセなどで よく使われるソフトウェアシンセサイザーIFWは無料で高性能なのですが、マニュアルが無いため、直感的に使ってい</description>
+    </item>
+    
+  </channel>
+</rss>

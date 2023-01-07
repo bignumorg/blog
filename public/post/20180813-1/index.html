@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説 | bignumのblog</title>
+  <meta name="author" content="bignum">
+  <meta name="description" content="EWIなどのウインドシンセなどで よく使われるソフトウェアシンセサイザーIFWは無料で高性能なのですが、マニュアルが無いため、直感的に使ってい">
+  <meta name="keywords" content="blog,developer,personal,Gadget,Instrument,EWI,Wind Synthesizer,NuEVI">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説"/>
+<meta name="twitter:description" content="EWIなどのウインドシンセなどで よく使われるソフトウェアシンセサイザーIFWは無料で高性能なのですが、マニュアルが無いため、直感的に使ってい"/>
+
+  <meta property="og:title" content="よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説" />
+<meta property="og:description" content="EWIなどのウインドシンセなどで よく使われるソフトウェアシンセサイザーIFWは無料で高性能なのですが、マニュアルが無いため、直感的に使ってい" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.bignum.org/post/20180813-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-08-13T23:31:26+09:00" />
+<meta property="article:modified_time" content="2018-08-13T23:31:26+09:00" />
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  <script src=/js/lazysizes.min.js></script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://blog.bignum.org/">bignumのblog</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="" title=""></a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/ewi/" title="EWI">EWI</a>
+            
+            <a class="tag" href="/tags/akai-ewi/" title="AKAI EWI">AKAI EWI</a>
+            
+            <a class="tag" href="/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/" title="よしめめさん">よしめめさん</a>
+            
+            <a class="tag" href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/" title="ソフトウェアシンセサイザー">ソフトウェアシンセサイザー</a>
+            
+            <a class="tag" href="/tags/ifw/" title="IFW">IFW</a>
+            
+          </div>
+          <h1>よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  bignum 
+            on Mon, Aug 13, 2018
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>EWIなどのウインドシンセなどで よく使われるソフトウェアシンセサイザーIFWは無料で高性能なのですが、マニュアルが無いため、直感的に使っている人が多いようです。開発チームの一員のよしめめさんがわかりにくいところを解説したのをまとめました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">どもです！開発チームの一人です。<br>リファレンスマニュアルは無いですねぇ・・・。<br>通常のアナログ音源と思ってもらえれば大丈夫ですので。<br><br>ただ、いくつかはマニュアルが無いとわからない部分もあって・・・とりあえずその部分だけ解説しますね。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028992862594072576?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●各OSCのTRIの文字をクリックするとSIN波やDWGS波形を選択できる。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028992936036331520?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●SYNCについて<br>ひとつ前のOSCのピッチに対してシンクがかかります。<br>OSC2,3,4がSYNCオンだとまとめてOSC1のピッチに強引に合うのですっごい変調かかる。<br>OSC1のSYNCはマスターピッチに対してシンクがかかる（はず。実装されてたっけな）。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028992991094927360?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●ROUTINGについて<br>わかりにくいので各々解説します。<br><br>【Serial 】<br>OUT 1→FILTER1→FILTER 2→FILTER 3→AMP 1 <br><br>直列。つまり最大-48dbという急峻なカットオフも可能。<br>※OSCのOUTを2にすると音鳴りません。<br>※AMP2は使用できません。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993097831575552?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">【Parallel 1】<br>OUT 1→FILTER 1 －<br>　　　　　　　　　　　＋－→FILTER 3→AMP 1<br>OUT 2→FILTER 2 －<br><br>2系統の音が並列に出て混ざった音がフィルター3を通ってアンプ1に。<br>※AMP2は使用できません。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993144287723521?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">【Parallel 2】<br>OUT 1→FILTER 1→FILTER 3→AMP 1 <br>OUT 1→FILTER 2→AMP 2 <br><br>アンプまで完全な並列。<br>フィルター3はボイス1だけ。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993221358047233?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●GLIDEについて<br>【FIXED RATE】<br>オンだとグライドの傾きがノートの差に関わらず一定になる。<br>例えば<br>オン：C4→C6はC4→C5の2倍の時間でグライド。<br>オフ：C4→C6とC4→C5は同じ時間でグライド。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993277318451201?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">【MIDI】<br>オンだとRATEノブはグライドの最低値。つまりEWIでグライドプレートを触っていなくても常時グライドがかかる。<br>オフだとRATEノブの値がそのままかかりEWIのグライド情報は無視される。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993343622012928?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●FILTER 3について<br>2〜24段のALL PASS FILTER。すべての周波数を通過させるフィルタだが、周波数ごとに位相が回っている。そのため元の音とミックスした場合に周波数ごとの音量変化が付き、周波数によって強調されたり減衰したりする。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993415109726208?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">二胡のような弦楽器などの再現に強い反面、音痩せなどの要因にもなるためROUTINGをParallel 2にしてボイス2で補う等の工夫も必要。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993451092635648?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">●MODULATION<br>所謂マトリクス・モジュレーション。<br>違うのはSOURCE1とSOURCE2は掛け算（例：ブレスとEG）され、DESTINATIONを動かせる。<br>普通の使い方するならSOURCE1とDESTINATIONを使えばOK。<br>SOURCE1は空欄でSOURCE2を設定しても何も動きません。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993509422850049?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">説明しないとわからんのってこんなもんかなぁ。<br>あとは普通のアナログシンセが分かっていれば自ずと分かるはずなんで。</p>&mdash; よしめめ (@yoshmeme) <a href="https://twitter.com/yoshmeme/status/1028993558907219968?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/post/20161116-2/" data-toggle="tooltip" data-placement="top" title="AKAI EWI公式さんによる、EWI4000で音が突然変わるときのチェクポイント">
+              Previous<br>
+              <span>AKAI EWI公式さんによる、EWI4000で音が突然変わるときのチェクポイント</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+<div class="giscus" id="comments"></div>
+<script src="https://giscus.app/client.js" 
+  data-repo="bignumorg/blog" 
+  data-repo-id="R_kgDOIuvGxg"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOIuvGxs4CTcBU"
+  data-mapping="pathname"
+  data-strict="0" 
+  data-reactions-enabled="1" 
+  data-emit-metadata="0" 
+  data-input-position="top"
+  data-theme="light_tritanopia"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+  </script>
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/akai-ewi/">AKAI EWI</a>
+    
+    <a href="/tags/akai-ewi%E5%85%AC%E5%BC%8F%E3%81%95%E3%82%93/">AKAI EWI公式さん</a>
+    
+    <a href="/tags/ewi/">EWI</a>
+    
+    <a href="/tags/ifw/">IFW</a>
+    
+    <a href="/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/">よしめめさん</a>
+    
+    <a href="/tags/%E3%82%AA%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%96%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC/">オクターブローラー</a>
+    
+    <a href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/">ソフトウェアシンセサイザー</a>
+    
+    <a href="/tags/%E3%83%AA%E3%83%83%E3%83%97%E3%83%99%E3%83%B3%E3%83%89/">リップベンド</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+<li>
+  <a href="https://github.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://twitter.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.instagram.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://facebook.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="/index.xml" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          bignum  
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J4LM6E4438"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-J4LM6E4438', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>
