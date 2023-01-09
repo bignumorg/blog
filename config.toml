@@ -17,7 +17,7 @@ enableEmoji = true
 ignoreErrors = ["error-remote-getjson"]
 
 disqusShortname = ""
-googleAnalytics = "G-J4LM6E4438"
+googleAnalytics = "UA-30121206-1"
 
 [outputs]
 home = ["HTML", "JSON", "RSS"]
@@ -116,9 +116,9 @@ rss = true
 [params.giscus]
 enable = true
 repo = "bignumorg/blog"
-repo_id = "R_kgDOIuvGxg"
+repo_id = "R_kgDOIuyV7w"
 category = "Announcements"
-category_id = "DIC_kwDOIuvGxs4CTcBU"
+category_id = "DIC_kwDOIuyV784CTcG4"
 input_position = "top"
 theme = "light_tritanopia"
 lang = "ja"
