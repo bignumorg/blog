@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>bignum</copyright>
-    <lastBuildDate>Mon, 13 Aug 2018 23:31:26 +0900</lastBuildDate><atom:link href="https://blog.bignum.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 23:53:39 +0900</lastBuildDate><atom:link href="https://blog.bignum.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple</title>
+      <link>https://blog.bignum.org/categories/apple/</link>
+      <pubDate>Mon, 09 Jan 2023 23:53:39 +0900</pubDate>
+      
+      <guid>https://blog.bignum.org/categories/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BootCamp</title>
+      <link>https://blog.bignum.org/categories/bootcamp/</link>
+      <pubDate>Mon, 09 Jan 2023 23:53:39 +0900</pubDate>
+      
+      <guid>https://blog.bignum.org/categories/bootcamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intel Mac</title>
+      <link>https://blog.bignum.org/categories/intel-mac/</link>
+      <pubDate>Mon, 09 Jan 2023 23:53:39 +0900</pubDate>
+      
+      <guid>https://blog.bignum.org/categories/intel-mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://blog.bignum.org/categories/windows/</link>
+      <pubDate>Mon, 09 Jan 2023 23:53:39 +0900</pubDate>
+      
+      <guid>https://blog.bignum.org/categories/windows/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>EWI</title>
       <link>https://blog.bignum.org/categories/ewi/</link>
