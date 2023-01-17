@@ -2,22 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.bignum.org/tags/akai-ewi/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/ewi/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/ewi/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/nuevi/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/nuevi/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/nurad/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/nurad/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/ob-xd/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/ob-xd/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/post/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B7%E3%83%B3%E3%82%BB/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B7%E3%83%B3%E3%82%BB/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/categories/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.bignum.org/post/20230117-1/</loc>
+    <lastmod>2023-01-17T21:32:26+09:00</lastmod>
+  </url><url>
     <loc>https://blog.bignum.org/tags/apple/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/categories/apple/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
-    <loc>https://blog.bignum.org/</loc>
-    <lastmod>2023-01-09T23:53:39+09:00</lastmod>
-  </url><url>
     <loc>https://blog.bignum.org/tags/bootcamp/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/categories/bootcamp/</loc>
-    <lastmod>2023-01-09T23:53:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/categories/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/tags/intel-mac/</loc>
@@ -29,26 +80,11 @@
     <loc>https://blog.bignum.org/post/20230109-1/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
-    <loc>https://blog.bignum.org/post/</loc>
-    <lastmod>2023-01-09T23:53:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/tags/</loc>
-    <lastmod>2023-01-09T23:53:39+09:00</lastmod>
-  </url><url>
     <loc>https://blog.bignum.org/tags/windows/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/categories/windows/</loc>
     <lastmod>2023-01-09T23:53:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/tags/akai-ewi/</loc>
-    <lastmod>2018-08-13T23:31:26+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/tags/ewi/</loc>
-    <lastmod>2018-08-13T23:31:26+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/categories/ewi/</loc>
-    <lastmod>2018-08-13T23:31:26+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/tags/ifw/</loc>
     <lastmod>2018-08-13T23:31:26+09:00</lastmod>
@@ -57,12 +93,6 @@
     <lastmod>2018-08-13T23:31:26+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/</loc>
-    <lastmod>2018-08-13T23:31:26+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/</loc>
-    <lastmod>2018-08-13T23:31:26+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.bignum.org/categories/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/</loc>
     <lastmod>2018-08-13T23:31:26+09:00</lastmod>
   </url><url>
     <loc>https://blog.bignum.org/post/20180813-1/</loc>

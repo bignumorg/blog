@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ | bignumのblog</title>
+  <meta name="author" content="bignum">
+  <meta name="description" content="Windowsのソフトの中にはM1(ARM)では動かないアプリもある。 そんな時はIntelのCPUが載ったMacがあれば、そちらでBootC">
+  <meta name="keywords" content="blog,developer,personal,Gadget,Instrument,EWI,Wind Synthesizer,NuEVI">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ"/>
+<meta name="twitter:description" content="Windowsのソフトの中にはM1(ARM)では動かないアプリもある。 そんな時はIntelのCPUが載ったMacがあれば、そちらでBootC"/>
+
+  <meta property="og:title" content="Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ" />
+<meta property="og:description" content="Windowsのソフトの中にはM1(ARM)では動かないアプリもある。 そんな時はIntelのCPUが載ったMacがあれば、そちらでBootC" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.bignum.org/post/20230109-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-09T23:53:39+09:00" />
+<meta property="article:modified_time" content="2023-01-09T23:53:39+09:00" />
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  <script src=/js/lazysizes.min.js></script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://blog.bignum.org/">bignumのblog</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="" title=""></a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/apple/" title="Apple">Apple</a>
+            
+            <a class="tag" href="/tags/intel-mac/" title="Intel Mac">Intel Mac</a>
+            
+            <a class="tag" href="/tags/bootcamp/" title="BootCamp">BootCamp</a>
+            
+            <a class="tag" href="/tags/windows/" title="Windows">Windows</a>
+            
+          </div>
+          <h1>Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  bignum 
+            on Mon, Jan 9, 2023
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Windowsのソフトの中にはM1(ARM)では動かないアプリもある。<br>
+そんな時はIntelのCPUが載ったMacがあれば、そちらでBootCampした方が早い。<br>
+とは言え、Intel Macの内蔵ディスクの空きがない場合が多いだろう。<br>
+そんなときには、外付けのディスクにBootCampをインストールするのが良いだろう。<br>
+本当はThunderBolt経由のディスクにインストールしたかったが、いろいろうまくいかなかったので、
+今回はUSB3の外付けディスクにインストールした。<br>
+基本的には、
+<a href="https://digi-blo.com/computer/mac_book/win-ssd2" target="_blank">「MacにWindowsを外付けSSDにインストールする方法Part2!!Windows環境,特殊ツール不要！ - digi-blo.com」</a>
+を参考にさせて貰った。<br>
+このページに従って実行するときに、気をつけなければいけないのは、中身を空っぽにしても構わないディスクであること、パーティションはGPTにしないといけないことくらいだろう。<br>
+後は、Windowsマシンでインストーラーを作った場合は、install.wimではなく、install.esdと読み替えが必要なこと、この記事では途中でrebootしたりしているので、CドライブとDドライブが逆になっている可能性があることぐらいだろうか。<br>
+先人の知恵に感謝。</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/post/20180813-1/" data-toggle="tooltip" data-placement="top" title="よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説">
+              Previous<br>
+              <span>よしめめさんによる高性能無料ソフトウェアシンセサイザーIFWの解説</span>
+            </a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/post/20230117-1/" data-toggle="tooltip" data-placement="top" title="よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！">
+              Next<br>
+              <span>よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！</span>
+            </a>
+          </li>
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+<div class="giscus" id="comments"></div>
+<script src="https://giscus.app/client.js" 
+  data-repo="bignumorg/blog" 
+  data-repo-id="R_kgDOIuyV7w"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOIuyV784CTcG4"
+  data-mapping="pathname"
+  data-strict="0" 
+  data-reactions-enabled="1" 
+  data-emit-metadata="0" 
+  data-input-position="top"
+  data-theme="light_tritanopia"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+  </script>
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/akai-ewi/">AKAI EWI</a>
+    
+    <a href="/tags/akai-ewi%E5%85%AC%E5%BC%8F%E3%81%95%E3%82%93/">AKAI EWI公式さん</a>
+    
+    <a href="/tags/apple/">Apple</a>
+    
+    <a href="/tags/bootcamp/">BootCamp</a>
+    
+    <a href="/tags/ewi/">EWI</a>
+    
+    <a href="/tags/ifw/">IFW</a>
+    
+    <a href="/tags/intel-mac/">Intel Mac</a>
+    
+    <a href="/tags/nuevi/">NuEVI</a>
+    
+    <a href="/tags/nurad/">NuRAD</a>
+    
+    <a href="/tags/ob-xd/">OB-Xd</a>
+    
+    <a href="/tags/windows/">Windows</a>
+    
+    <a href="/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/">よしめめさん</a>
+    
+    <a href="/tags/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B7%E3%83%B3%E3%82%BB/">ウインドシンセ</a>
+    
+    <a href="/tags/%E3%82%AA%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%96%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC/">オクターブローラー</a>
+    
+    <a href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/">ソフトウェアシンセサイザー</a>
+    
+    <a href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/">ソフトシンセサイザー</a>
+    
+    <a href="/tags/%E3%83%AA%E3%83%83%E3%83%97%E3%83%99%E3%83%B3%E3%83%89/">リップベンド</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+<li>
+  <a href="https://github.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://twitter.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.instagram.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://facebook.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="/index.xml" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          bignum  
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-30121206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>

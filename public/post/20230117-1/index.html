@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！ | bignumのblog</title>
+  <meta name="author" content="bignum">
+  <meta name="description" content="ウィンドシンセ界ではお馴染みのよしめめさんが、OB-Xd というソフトシンセサイザーで、ウインドシンセ向けの音色を配布開始しました。よしめめさ">
+  <meta name="keywords" content="blog,developer,personal,Gadget,Instrument,EWI,Wind Synthesizer,NuEVI">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！"/>
+<meta name="twitter:description" content="ウィンドシンセ界ではお馴染みのよしめめさんが、OB-Xd というソフトシンセサイザーで、ウインドシンセ向けの音色を配布開始しました。よしめめさ"/>
+
+  <meta property="og:title" content="よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！" />
+<meta property="og:description" content="ウィンドシンセ界ではお馴染みのよしめめさんが、OB-Xd というソフトシンセサイザーで、ウインドシンセ向けの音色を配布開始しました。よしめめさ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.bignum.org/post/20230117-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-17T21:32:26+09:00" />
+<meta property="article:modified_time" content="2023-01-17T21:32:26+09:00" />
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  <script src=/js/lazysizes.min.js></script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://blog.bignum.org/">bignumのblog</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="" title=""></a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/ewi/" title="EWI">EWI</a>
+            
+            <a class="tag" href="/tags/akai-ewi/" title="AKAI EWI">AKAI EWI</a>
+            
+            <a class="tag" href="/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/" title="よしめめさん">よしめめさん</a>
+            
+            <a class="tag" href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/" title="ソフトシンセサイザー">ソフトシンセサイザー</a>
+            
+            <a class="tag" href="/tags/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B7%E3%83%B3%E3%82%BB/" title="ウインドシンセ">ウインドシンセ</a>
+            
+            <a class="tag" href="/tags/ob-xd/" title="OB-Xd">OB-Xd</a>
+            
+            <a class="tag" href="/tags/nurad/" title="NuRAD">NuRAD</a>
+            
+            <a class="tag" href="/tags/nuevi/" title="NuEVI">NuEVI</a>
+            
+          </div>
+          <h1>よしめめさんによるソフトシンセサイザーOB-Xdでのウインドシンセ向けの音色配布開始！</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  bignum 
+            on Tue, Jan 17, 2023
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>ウィンドシンセ界ではお馴染みのよしめめさんが、<a href="https://bit.ly/OB-Xd" target="_blank">OB-Xd</a> というソフトシンセサイザーで、ウインドシンセ向けの音色を配布開始しました。よしめめさんのblogは<a href="https://ameblo.jp/yoshmeme/entry-12784331691.html" target="_blank">こちら</a>。</p>
+<p>今回はStandalone用(Windows, Mac, linux版あり）の音色の他、Mac版としてはGarage Band用（OSにバンドル、無料）、 Windows版としては<a href="https://www.bandlab.com/products/cakewalk" target="_blank">Cakewalk</a>（無料！）用にも、音色とそれぞれの音色に合わせたエフェクトのセットでそれぞれ22音色！の配布しています。<br>
+お勧めです。
+私もWindows版を中心にお手伝いをさせていただきました。</p>
+<p><a href="https://bit.ly/NuRAD" target="_blank">NuRAD</a>、<a href="https://bit.ly/NuEVI_" target="_blank">NuEVI</a>のPoly Play用音色も2音色含まれています。NuRAD, NuEVIをお持ちの人も遊んでみてください。</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/post/20230109-1/" data-toggle="tooltip" data-placement="top" title="Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ">
+              Previous<br>
+              <span>Intel Macにおいて、外付けディスクでBootCampでWindowsするメモ</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+<div class="giscus" id="comments"></div>
+<script src="https://giscus.app/client.js" 
+  data-repo="bignumorg/blog" 
+  data-repo-id="R_kgDOIuyV7w"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOIuyV784CTcG4"
+  data-mapping="pathname"
+  data-strict="0" 
+  data-reactions-enabled="1" 
+  data-emit-metadata="0" 
+  data-input-position="top"
+  data-theme="light_tritanopia"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+  </script>
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/akai-ewi/">AKAI EWI</a>
+    
+    <a href="/tags/akai-ewi%E5%85%AC%E5%BC%8F%E3%81%95%E3%82%93/">AKAI EWI公式さん</a>
+    
+    <a href="/tags/apple/">Apple</a>
+    
+    <a href="/tags/bootcamp/">BootCamp</a>
+    
+    <a href="/tags/ewi/">EWI</a>
+    
+    <a href="/tags/ifw/">IFW</a>
+    
+    <a href="/tags/intel-mac/">Intel Mac</a>
+    
+    <a href="/tags/nuevi/">NuEVI</a>
+    
+    <a href="/tags/nurad/">NuRAD</a>
+    
+    <a href="/tags/ob-xd/">OB-Xd</a>
+    
+    <a href="/tags/windows/">Windows</a>
+    
+    <a href="/tags/%E3%82%88%E3%81%97%E3%82%81%E3%82%81%E3%81%95%E3%82%93/">よしめめさん</a>
+    
+    <a href="/tags/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B7%E3%83%B3%E3%82%BB/">ウインドシンセ</a>
+    
+    <a href="/tags/%E3%82%AA%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%96%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC/">オクターブローラー</a>
+    
+    <a href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/">ソフトウェアシンセサイザー</a>
+    
+    <a href="/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC/">ソフトシンセサイザー</a>
+    
+    <a href="/tags/%E3%83%AA%E3%83%83%E3%83%97%E3%83%99%E3%83%B3%E3%83%89/">リップベンド</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+<li>
+  <a href="https://github.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://twitter.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.instagram.com/bignumorg" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://facebook.com/bignum" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="/index.xml" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          bignum  
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-30121206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>
